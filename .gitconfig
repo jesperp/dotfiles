@@ -1,0 +1,5 @@
+[alias]
+	japaleno = reset HEAD --hard
+	shallow-clone = clone --depth=1
+[core]
+	editor = /usr/local/bin/vim

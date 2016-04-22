@@ -4,6 +4,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+"Plug 'jmcantrell/vim-virtualenv'
 call plug#end()
 
 filetype plugin on
@@ -38,6 +39,7 @@ nmap _ <C-W>_
 nmap <silent> <Left> :bprev<CR>
 nmap <silent> <Right> :bnext<CR>
 nmap <S-TAB> <<
+nmap <Enter> <C-]>
 nmap <TAB> >>
 
 
@@ -54,6 +56,10 @@ nn '' ``zz
 "nmap <C-P> :cprevious<CR>
 "nmap <C-N> :cnext<CR>
 
+
+" Jump between placeholder "<...>" in insert mode
+inoremap <C-J> <ESC>/<\.\.\.><cr>ca<
+
 " ctags
 nmap <C-H> :tprevious<CR>
 nmap <C-L> :tnext<CR>
@@ -68,3 +74,15 @@ let g:syntastic_javascript_checkers = ["eslint"]
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'molokai'
+
+" Ag (The Silver Searcher)
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore node_modules
+      \ --ignore .hg
+      \ --ignore ".*.swp"
+      \ --ignore "*.svg"
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'

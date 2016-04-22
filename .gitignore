@@ -1,0 +1,19 @@
+# Vim
+Session.vim
+
+# Python
+*.py[cod]
+__pycache__/
+pip-log.txt
+
+# Javascript
+node_modules/
+bower_components/
+
+# Random junk
+.#*
+*~
+*.swp
+.DS_Store
+*.swo
+tags
