@@ -87,3 +87,9 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .DS_Store
       \ --ignore "**/*.pyc"
       \ -g ""'
+
+" See :helpgrep Eatchar
+func Eatchar(pat)
+    let c = nr2char(getchar(0))
+    return (c =~ a:pat) ? '' : c
+endfunc
