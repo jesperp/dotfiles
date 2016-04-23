@@ -57,8 +57,8 @@ nn '' ``zz
 "nmap <C-N> :cnext<CR>
 
 
-" Jump between placeholder "<...>" in insert mode
-inoremap <C-J> <ESC>/<\.\.\.><cr>ca<
+" Jump between placeholder "…" (unicode U+2026) in insert mode 
+inoremap <C-J> <ESC>/…<cr>s
 
 " ctags
 nmap <C-H> :tprevious<CR>
@@ -74,6 +74,7 @@ let g:syntastic_javascript_checkers = ["eslint"]
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'molokai'
+let g:airline_section_y = '0x%-4B %{airline#util#wrap(airline#parts#ffenc(),0)}'  " Include hexvalue of char under cursor
 
 " Ag (The Silver Searcher)
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
