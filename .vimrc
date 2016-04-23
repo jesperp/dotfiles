@@ -58,7 +58,7 @@ nn '' ``zz
 
 
 " Jump between placeholder "…" (unicode U+2026) in insert mode 
-inoremap <C-J> <ESC>/…<cr>s
+inoremap <C-J> <C-O>/…<cr><C-O>s
 
 " ctags
 nmap <C-H> :tprevious<CR>
