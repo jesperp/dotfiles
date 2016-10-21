@@ -1,6 +1,9 @@
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'elixir-lang/vim-elixir'
+Plug 'lambdatoast/elm.vim'
+Plug 'mhinz/vim-startify'
 Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -46,6 +49,11 @@ nmap <TAB> >>
 if has("gui_macvim")
     set guifont=Menlo_Regular:h12
 endif
+
+" GUI
+set guifont=Source\ Code\ Pro\ 11
+
+set mouse=n
 
 " Bind '' to ``, much easier to type and it's the only one of the two I'm using
 nn '' ``zz
