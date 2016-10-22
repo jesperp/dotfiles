@@ -2,4 +2,7 @@
 	japaleno = reset HEAD --hard
 	shallow-clone = clone --depth=1
 [core]
-	editor = /usr/local/bin/vim
+	editor = /usr/bin/vim
+[user]
+	email = jeppe.petersen@gmail.com
+	name = Jesper Petersen
