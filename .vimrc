@@ -44,6 +44,7 @@ nmap <silent> <Right> :bnext<CR>
 nmap <S-TAB> <<
 nmap <Enter> <C-]>
 nmap <TAB> >>
+nmap ; :
 
 
 if has("gui_macvim")
@@ -58,6 +59,18 @@ set mouse=n
 " Bind '' to ``, much easier to type and it's the only one of the two I'm using
 nn '' ``zz
 
+" Colemak rebinding
+noremap n j|noremap N J|noremap <C-W>n <C-W>j|noremap <C-W>N <C-W>J
+noremap e k|noremap <C-W>e <C-W>k|noremap <C-W>E <C-W>K
+"| noremap <C-W>e <C-W>k | noremap E K | noremap <C-W>E <C-W>K
+noremap i l|noremap <C-W>i <C-W>l|noremap <C-W>I <C-W>L
+noremap I L
+" | noremap <C-W>E <C-W>K | noremap I L | noremap <C-W>E <C-W>K
+
+noremap l i
+noremap L I
+noremap k n
+noremap K N
 
 " GREP'ing
 "set grepprg=grep\ -nR\ $*\ *
